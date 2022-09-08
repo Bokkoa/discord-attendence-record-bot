@@ -4,7 +4,8 @@ from datetime import datetime
 
 from clients.mongo_client import insert_attendence
 
-ATTENDENCE_CHANNEL = 'experimental'
+ATTENDENCE_CHANNEL = os.getenv('DISCORD_CHANNEL', None);
+
 COFFEE_EMOJI = u"\u2615"
 STATUS = ('available', 'unavailable')
 
