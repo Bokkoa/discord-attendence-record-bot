@@ -48,11 +48,11 @@ async def on_message(message):
                 await message.delete()
                 return await message.channel.send(f"{message.author.mention} trató de marcar asistencia desde el celular en home office. Se está haciendo wey xd!")
 
-            # insert_attendence(username, datetime.now(), STATUS[0])
+            insert_attendence(username, datetime.now(), STATUS[0])
             await message.add_reaction(COFFEE_EMOJI)
             return
 
         elif (user_message.lower() == STATUS[1]):
-            # insert_attendence(username, datetime.now(), STATUS[1])
+            insert_attendence(username, datetime.now(), STATUS[1])
             await message.add_reaction(COFFEE_EMOJI)
             return
